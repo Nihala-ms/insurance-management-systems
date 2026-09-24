@@ -61,13 +61,21 @@ insuranceClaimServer.get("/", (req, res) => {
 });
 
 // ======================================================
-// PORT
+// LOCAL DEVELOPMENT
 // ======================================================
 
 const PORT = process.env.PORT || 3000;
 
-insuranceClaimServer.listen(PORT, () => {
-  console.log(
-    `insurance-server started running at PORT ${PORT}`
-  );
-});
+if (process.env.NODE_ENV !== "production") {
+  insuranceClaimServer.listen(PORT, () => {
+    console.log(
+      `insurance-server started running at PORT ${PORT}`
+    );
+  });
+}
+
+// ======================================================
+// VERCEL
+// ======================================================
+
+module.exports = insuranceClaimServer;
