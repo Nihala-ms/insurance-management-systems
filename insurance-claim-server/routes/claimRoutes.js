@@ -1,8 +1,8 @@
 const express = require("express");
 const multer = require("multer");
 
-const Claim = require("../models/Claim");
-const UserPolicy = require("../models/UserPolicy");
+const Claim = require("../models/claim");
+const UserPolicy = require("../models/userPolicy");
 
 const router = express.Router();
 

@@ -5,9 +5,9 @@ const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
 
-const UserPolicy = require("../models/UserPolicy");
-const Policy = require("../models/Policy");
-const User = require("../models/User");
+const UserPolicy = require("../models/userPolicy");
+const Policy = require("../models/policy");
+const User = require("../models/user");
 
 
 // ======================================================

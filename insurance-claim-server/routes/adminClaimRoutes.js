@@ -1,5 +1,5 @@
 const express = require("express");
-const Claim = require("../models/Claim");
+const Claim = require("../models/claim");
 
 const router = express.Router();
 
