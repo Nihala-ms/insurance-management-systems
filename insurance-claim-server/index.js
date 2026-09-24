@@ -14,7 +14,6 @@ const claimRoutes = require("./routes/claimRoutes");
 const adminClaimRoutes = require("./routes/adminClaimRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 
-
 // 4. Create Express server
 const insuranceClaimServer = express();
 
@@ -37,15 +36,9 @@ insuranceClaimServer.use(
 
 insuranceClaimServer.use("/api/auth", authRoutes);
 insuranceClaimServer.use("/api/policies", policyRoutes);
-insuranceClaimServer.use(
-  "/api/user-policies",
-  userPolicyRoutes
-);
+insuranceClaimServer.use("/api/user-policies", userPolicyRoutes);
 insuranceClaimServer.use("/api/claims", claimRoutes);
-insuranceClaimServer.use(
-  "/api/admin/claims",
-  adminClaimRoutes
-);
+insuranceClaimServer.use("/api/admin/claims", adminClaimRoutes);
 insuranceClaimServer.use("/api/admin", adminRoutes);
 
 // ======================================================
@@ -71,7 +64,7 @@ insuranceClaimServer.get("/", (req, res) => {
 // PORT
 // ======================================================
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 insuranceClaimServer.listen(PORT, () => {
   console.log(
