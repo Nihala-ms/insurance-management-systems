@@ -1,5 +1,5 @@
 const express = require("express");
-const Policy = require("../models/Policy");
+const Policy = require("../models/policy");
 
 const router = express.Router();
 
