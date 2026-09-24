@@ -1,5 +1,5 @@
-const API_URL = "http://localhost:3000/api";
-
+const API_URL =
+  "https://insurance-management-systems-pht3uta6d-nihala-ms-projects.vercel.app/api";
 // =====================================================
 // HELPER
 // =====================================================
