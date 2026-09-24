@@ -94,7 +94,7 @@ function PolicyDetails() {
 
     if (!storedUser) {
       alert("Please login to continue.");
-      navigate("/login");
+      navigate("/Auth");
       return;
     }
 

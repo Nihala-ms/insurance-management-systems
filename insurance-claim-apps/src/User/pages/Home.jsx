@@ -1,14 +1,21 @@
-import React from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Home() {
+    const navigate = useNavigate();
+
+    const goToLogin = () => {
+        navigate("/Auth");
+    };
+
     return (
         <div>
             <div className="bg-black text-white overflow-hidden">
 
-
                 <Header />
+
                 {/* Hero Section */}
                 <section className="relative">
 
@@ -29,7 +36,6 @@ function Home() {
                                 </p>
                             </div>
 
-
                             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
 
                                 Modern &
@@ -42,27 +48,30 @@ function Home() {
 
                             </h1>
 
-
                             <p className="text-gray-400 text-lg leading-8 mt-8 max-w-2xl">
                                 Experience a faster and smarter way to manage insurance claims.
                                 Upload documents securely, track approvals in real-time,
                                 and simplify the entire claim process digitally.
                             </p>
 
-
                             {/* Buttons */}
                             <div className="flex flex-wrap gap-5 mt-10">
 
-                                <button className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-2xl text-lg font-semibold transition shadow-lg shadow-blue-600/30">
+                                <button
+                                    onClick={goToLogin}
+                                    className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-2xl text-lg font-semibold transition shadow-lg shadow-blue-600/30"
+                                >
                                     Submit Claim
                                 </button>
 
-                                <button className="border border-gray-700 hover:border-blue-500 hover:text-blue-500 px-8 py-4 rounded-2xl text-lg transition">
+                                <button
+                                    onClick={goToLogin}
+                                    className="border border-gray-700 hover:border-blue-500 hover:text-blue-500 px-8 py-4 rounded-2xl text-lg transition"
+                                >
                                     Explore Policies
                                 </button>
 
                             </div>
-
 
                             {/* Stats */}
                             <div className="grid grid-cols-3 gap-8 mt-16">
@@ -77,7 +86,6 @@ function Home() {
                                     </p>
                                 </div>
 
-
                                 <div>
                                     <h2 className="text-4xl font-bold text-white">
                                         98%
@@ -87,7 +95,6 @@ function Home() {
                                         Approval Rate
                                     </p>
                                 </div>
-
 
                                 <div>
                                     <h2 className="text-4xl font-bold text-white">
@@ -102,7 +109,6 @@ function Home() {
                             </div>
 
                         </div>
-
 
                         {/* Right Side */}
                         <div className="relative flex justify-center">
@@ -119,15 +125,12 @@ function Home() {
                                     className="rounded-2xl"
                                 />
 
-                                {/* Floating Status Card */}
-
                             </div>
                         </div>
 
                     </div>
 
                 </section>
-
 
                 {/* Features Section */}
                 <section className="max-w-7xl mx-auto px-6 md:px-12 py-24">
@@ -143,7 +146,6 @@ function Home() {
                         </p>
 
                     </div>
-
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
 
@@ -164,7 +166,6 @@ function Home() {
 
                         </div>
 
-
                         {/* Card 2 */}
                         <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 hover:border-blue-500 hover:-translate-y-2 transition duration-300">
 
@@ -181,7 +182,6 @@ function Home() {
                             </p>
 
                         </div>
-
 
                         {/* Card 3 */}
                         <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 hover:border-blue-500 hover:-translate-y-2 transition duration-300">
@@ -204,7 +204,6 @@ function Home() {
 
                 </section>
 
-
                 {/* Process Section */}
                 <section className="bg-gray-950 border-y border-gray-900 py-24">
 
@@ -221,7 +220,6 @@ function Home() {
                             </p>
 
                         </div>
-
 
                         <div className="grid md:grid-cols-3 gap-10 mt-20">
 
@@ -241,7 +239,6 @@ function Home() {
 
                             </div>
 
-
                             <div className="text-center">
 
                                 <div className="w-20 h-20 mx-auto rounded-full bg-blue-600 flex items-center justify-center text-3xl font-bold">
@@ -257,7 +254,6 @@ function Home() {
                                 </p>
 
                             </div>
-
 
                             <div className="text-center">
 
@@ -281,7 +277,6 @@ function Home() {
 
                 </section>
 
-
                 {/* CTA */}
                 <section className="py-24">
 
@@ -297,7 +292,10 @@ function Home() {
                                 Join thousands of users managing their insurance claims digitally with speed and security.
                             </p>
 
-                            <button className="mt-10 bg-white text-blue-600 hover:bg-gray-100 px-10 py-4 rounded-2xl text-lg font-semibold transition">
+                            <button
+                                onClick={goToLogin}
+                                className="mt-10 bg-white text-blue-600 hover:bg-gray-100 px-10 py-4 rounded-2xl text-lg font-semibold transition"
+                            >
                                 Create Free Account
                             </button>
 
@@ -308,10 +306,10 @@ function Home() {
                 </section>
 
                 <Footer />
-            </div>
 
+            </div>
         </div>
-    )
+    );
 }
 
-export default Home
+export default Home;
