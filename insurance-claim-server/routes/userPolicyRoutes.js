@@ -15,11 +15,10 @@ const User = require("../models/user");
 // ======================================================
 
 const uploadDirectory = path.join(
-  __dirname,
-  "../uploads"
+  "/tmp",
+  "insurance-uploads"
 );
 
-// Create uploads folder if it doesn't exist
 if (!fs.existsSync(uploadDirectory)) {
   fs.mkdirSync(uploadDirectory, {
     recursive: true,

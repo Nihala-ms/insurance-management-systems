@@ -27,7 +27,7 @@ insuranceClaimServer.use(express.json());
 
 insuranceClaimServer.use(
   "/uploads",
-  express.static(path.join(__dirname, "uploads"))
+  express.static(path.join("/tmp", "insurance-uploads"))
 );
 
 // ======================================================
